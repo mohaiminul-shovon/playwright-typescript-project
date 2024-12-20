@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A demo playwright UI testing projects",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "show-report": "npx playwright show-report"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -11,6 +14,7 @@
     "@types/node": "^22.10.2"
   },
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "playwright-projects": "file:"
   }
 }
