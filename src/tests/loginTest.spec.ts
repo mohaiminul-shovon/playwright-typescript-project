@@ -10,7 +10,7 @@ test.beforeEach(async({page})=>{
 test.describe("Login Test",()=>{
     test('standard user should logged in properly',async()=>{
         await loginPage.loginWithUser(user.standard_user.username, user.standard_user.password);
-        expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
+        await expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
     });
     test('locked user should not be allowed to login', async()=>{
         await loginPage.loginWithUser(user.locked_user.username, user.locked_user.password);
@@ -18,7 +18,7 @@ test.describe("Login Test",()=>{
     });
     test('problem user should login in but will have issues', async () => {
         await loginPage.loginWithUser(user.problem_user.username, user.problem_user.password);
-        expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
+        await expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
         //add some more assertions on items page.
     })
     test('performance glitch user test', async () => {
@@ -28,11 +28,11 @@ test.describe("Login Test",()=>{
     })
     test('error user should face issue with checkout',async()=>{
         await loginPage.loginWithUser(user.error_user.username, user.error_user.password);
-        expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
+        await expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
     });
     test('visual user should face issue with visual contents',async()=>{
         await loginPage.loginWithUser(user.visual_user.username, user.visual_user.password);
-        expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
+        await expect(loginPage.page).toHaveURL('https://www.saucedemo.com/inventory.html');
     });
     
 })

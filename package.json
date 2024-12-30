@@ -4,8 +4,7 @@
   "description": "A demo playwright UI testing projects",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "show-report": "npx playwright show-report"
+    "test": "npx playwright test "
   },
   "author": "",
   "license": "ISC",
