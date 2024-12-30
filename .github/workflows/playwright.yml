@@ -30,4 +30,7 @@ jobs:
         run: npx playwright install
 
       - name: Run Playwright tests
+        env:
+          LOGIN_URL: ${{ env.LOGIN_URL }}
+          INVENTORY_URL: ${{ env.INVENTORY_URL}}
         run: npm run test
