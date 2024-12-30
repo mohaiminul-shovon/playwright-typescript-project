@@ -29,8 +29,10 @@ jobs:
       - name: Install playwright browsers
         run: npx playwright install
 
+      - name: Export environment variables
+        run: |
+          echo "LOGIN_URL=${{ vars.LOGIN_URL }}" >> $GITHUB_ENV
+          echo "INVENTORY_URL=${{ vars.INVENTORY_URL }}" >> $GITHUB_ENV
+
       - name: Run Playwright tests
-        env:
-          LOGIN_URL: ${{ env.LOGIN_URL }}
-          INVENTORY_URL: ${{ env.INVENTORY_URL}}
         run: npm run test
