@@ -27,4 +27,4 @@ jobs:
         run: npm ci
 
       - name: Run Playwright tests # Replace with your secret variable names
-        run: npx playwright test
+        run: npm run test
