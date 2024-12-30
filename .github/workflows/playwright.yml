@@ -12,7 +12,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-22.04
-    environment: TEST # Use the GitHub environment named TEST
+    environment: Test # Use the GitHub environment named TEST
 
     steps:
       - name: Checkout code
