@@ -2,9 +2,6 @@ import {test, expect} from "@playwright/test";
 import {LoginPage} from "../pages/login.pom"
 import {InventoryPage} from "../pages/inventory.pom"
 import * as user from "../data/userInfo.json";
-import { log } from "node:util";
-import { start } from "node:repl";
-import exp from "node:constants";
 
 let loginPage: LoginPage;
 let inventoryPage: InventoryPage;
